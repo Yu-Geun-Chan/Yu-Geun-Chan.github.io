@@ -63,7 +63,7 @@
             justify-content: center; /* 수평 중앙 정렬 */
             align-items: center; /* 수직 중앙 정렬 */
             gap: calc(24 * var(--rpx-vw)); /* 항목 간 간격 조절 */
-            font-size: calc(36 * var(--rpx-vw));
+            font-size: calc(48 * var(--rpx-vw));
             margin-top: calc(36 * var(--rpx-vw));
         }
 
@@ -80,7 +80,7 @@
             padding: calc(40 * var(--rpx-vh)) 0;
             overflow: hidden;
             gap: calc(60 * var(--rpx-vw));
-            font-size: calc(60 * var(--rpx-vw));
+            font-size: calc(84 * var(--rpx-vw));
         }
 
         .main-container-title-container {
@@ -90,9 +90,9 @@
             align-items: center;
             justify-content: center;
             color: inherit;
-            width: 50%;
+            width: 100%;
             padding: 0; /* 불필요한 여백 제거 */
-            margin-top: calc(100 * var(--rpx-vw));
+            margin-top: calc(50 * var(--rpx-vw));
         }
 
         .main-container-title-content {
@@ -110,22 +110,22 @@
                 transform: translateY(0); /* 기본 위치 */
             }
             50% {
-                transform: translateY(-10px); /* 위로 10px 이동 */
+                transform: translateY(calc(-64 * var(--rpx-vw))); /* 위로 50px 이동 */
             }
         }
 
         .Scroll-down {
-            margin-top: calc(64 * var(--rpx-vw));
-            width: calc(64 * var(--rpx-vw));
-            height: calc(64 * var(--rpx-vw));
-            animation: moveUpDown 1.5s infinite; /* 1.5초마다 반복 애니메이션 */
+            margin-top: calc(48 * var(--rpx-vw));
+            width: calc(116 * var(--rpx-vw));
+            height: calc(116 * var(--rpx-vw));
+            animation: moveUpDown 2s infinite; /* 2초마다 반복 애니메이션 */
             transition: transform 0.3s ease-in-out;
         }
 
         .Scroll-down-text {
             margin-top: calc(-48 * var(--rpx-vw));
-            font-size: calc(36 * var(--rpx-vw));
-            animation: moveUpDown 1.5s infinite; /* 1.5초마다 반복 애니메이션 */
+            font-size: calc(48 * var(--rpx-vw));
+            animation: moveUpDown 2s infinite; /* 2초마다 반복 애니메이션 */
             transition: transform 0.3s ease-in-out;
         }
 
@@ -149,11 +149,12 @@
 
         .about-me {
             display: flex;
-            gap: calc(120 * var(--rpx-vw));
+            gap: calc(100 * var(--rpx-vw));
         }
 
         .my-profile-shot {
-            width: calc(280 * var(--rpx-vw));
+            margin: auto;
+            width: calc(380 * var(--rpx-vw));
             border-radius: 50%;
         }
 
@@ -167,17 +168,17 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: calc(60 * var(--rpx-vw));
+            gap: calc(100 * var(--rpx-vw));
         }
 
         .github-icon {
-            width: calc(60 * var(--rpx-vw));
+            width: calc(100 * var(--rpx-vw));
             background: #ffffff;
             border-radius: 100px;
         }
 
         .velog-icon {
-            width: calc(60 * var(--rpx-vw));
+            width: calc(100 * var(--rpx-vw));
         }
 
         .my-profile-info {
@@ -186,7 +187,7 @@
         }
 
         .info-container {
-            margin-bottom: calc(12 * var(--rpx-vw));
+            margin-bottom: calc(8 * var(--rpx-vw));
         }
 
         .info-container > p {
@@ -194,20 +195,20 @@
         }
 
         .name-text {
-            font-size: calc(24 * var(--rpx-vw));
+            font-size: calc(36 * var(--rpx-vw));
         }
 
         .highlight-text {
-            font-size: calc(24 * var(--rpx-vw));
+            font-size: calc(36 * var(--rpx-vw));
             color: #cdf256;
         }
 
         .regular-text {
-            font-size: calc(18 * var(--rpx-vw));
+            font-size: calc(28 * var(--rpx-vw));
         }
 
         .link-text {
-            font-size: calc(14 * var(--rpx-vw));
+            font-size: calc(20 * var(--rpx-vw));
         }
 
         /* About Me css 여기까지 */
@@ -222,14 +223,22 @@
             gap: calc(120 * var(--rpx-vw));
         }
 
-        .individual-project, .team-project {
-            width: calc(400 * var(--rpx-vw));
-            height: calc(250 * var(--rpx-vw));
+        .individual-project, .team-project, .portfolio-project {
+            width: calc(300 * var(--rpx-vw));
+            height: calc(200 * var(--rpx-vw));
         }
 
         .projects-link {
-            font-size: calc(24 * var(--rpx-vw));
-            margin-bottom: calc(20 * var(--rpx-vw));
+            font-size: calc(28 * var(--rpx-vw));
+            width: calc(300 * var(--rpx-vw));
+            height: calc(100 * var(--rpx-vw));
+        }
+
+        .projects-content {
+            margin-top: calc(16 * var(--rpx-vw));
+            font-size: calc(28 * var(--rpx-vw));
+            width: calc(300 * var(--rpx-vw));
+            text-align: center;
         }
 
         /* Skills css 시작 */
@@ -350,6 +359,9 @@
                     <img class="individual-project"
                          src="https://velog.velcdn.com/images/da5105/post/914c1b56-5490-4395-8c9d-ce1ef46c3c20/image.png"
                          alt="개인프로젝트">
+                    <div class="projects-content">
+                        <p>⚾ KLC </p>
+                    </div>
                     <div class="icon-container">
                         <a class="inline-block" target="blank" href="https://github.com/Yu-Geun-Chan/baseball_ygc">
                             <img class="github-icon"
@@ -375,6 +387,9 @@
                     <img class="team-project"
                          src="https://velog.velcdn.com/images/da5105/post/be97475d-922f-4a6e-866a-45edfe4638b0/image.png"
                          alt="OneTeam.project">
+                    <div class="projects-content">
+                        <p>⚽ KICKNALYSIS </p>
+                    </div>
                     <div class="icon-container">
                         <a class="inline-block" target="blank" href="https://github.com/korea-it-one-team">
                             <img class="github-icon"
@@ -391,12 +406,30 @@
                         </a>
                     </div>
                 </div>
-            </div>
-            <div class="skills">
-                <div class="skills-title">Skill*</div>
+                <div>
+                    <div class="projects-link">
+                    </div>
+                    <img class="portfolio-project"
+                         src="https://velog.velcdn.com/images/da5105/post/dc683fa3-85a8-431c-aca3-438e2d94853f/image.png"
+                         alt="포트폴리오">
+                    <div class="projects-content">
+                        <p> 🧍‍♂️ My Portfolio </p>
+                    </div>
+                    <div class="icon-container">
+                        <a class="inline-block" target="blank"
+                           href="https://github.com/Yu-Geun-Chan/Yu-Geun-Chan.github.io">
+                            <img class="github-icon"
+                                 src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-social-github-256.png"/>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
+        <div class="skills">
+            <div class="skills-title">Skill*</div>
+        </div>
     </div>
+</div>
 </div>
 
 <!-- Vanta.js 설정 스크립트 -->
@@ -412,7 +445,7 @@
         scaleMobile: 1.00,
         color: 0x4a6b9c,
         backgroundColor: 0x1b1b78,
-        points: 20.00
+        points: 10.00
     });
 </script>
 </body>
