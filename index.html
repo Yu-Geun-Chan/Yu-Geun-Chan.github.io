@@ -1,8 +1,256 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yu-Geun-Chan Portpolio</title>
+
+    <!-- 우클릭 방지-->
+    <script type="text/javascript">
+        document.oncontextmenu = function () {
+            alert("오른쪽 마우스 버튼을 사용할 수 없습니다."); // 우클릭 시 알림 메시지 표시
+            return false; // 기본 우클릭 메뉴를 비활성화
+        };
+    </script>
+
+    <style>
+        body {
+            overflow-x: hidden;
+        }
+
+        body, body * {
+            box-sizing: border-box;
+        }
+
+        @font-face {
+            font-family: 'NEXON Football Gothic B';
+            src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXONFootballGothicBA1.woff') format('woff');
+            font-weight: 700;
+            font-style: normal;
+        }
+
+        :root {
+            --default-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+            Ubuntu, "Helvetica Neue", Helvetica, Arial, "PingFang SC",
+            "Hiragino Sans GB", "Microsoft Yahei UI", "Microsoft Yahei",
+            "Source Han Sans CN", sans-serif;
+            --rpx-vw: 100vw / 1440;
+            --rpx-vh: 100vh / 1024;
+        }
+
+        /* 배경색 */
+        body {
+            font-family: 'NEXON Football Gothic B', Audiowide;
+            margin: 0;
+            padding: 0;
+            background: #1b1b78;
+            color: white;
+        }
+
+        body * {
+            font-family: 'NEXON Football Gothic B', Audiowide;
+        }
+
+        #body1 {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+        }
+
+        /* 인사글 및 소개 css 시작 */
+        .greeting-container {
+            display: flex; /* 가로 정렬 */
+            justify-content: center; /* 수평 중앙 정렬 */
+            align-items: center; /* 수직 중앙 정렬 */
+            gap: calc(24 * var(--rpx-vw)); /* 항목 간 간격 조절 */
+            font-size: calc(36 * var(--rpx-vw));
+            margin-top: calc(36 * var(--rpx-vw));
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            flex-wrap: nowrap;
+            position: relative;
+            width: calc(1440 * var(--rpx-vw)); /* 가로 기준 비율 */
+            min-height: calc(1024 * var(--rpx-vh)); /* 세로 기준 비율 */
+            margin: 0 auto;
+            padding: calc(40 * var(--rpx-vh)) 0;
+            overflow: hidden;
+            gap: calc(60 * var(--rpx-vw));
+            font-size: calc(60 * var(--rpx-vw));
+        }
+
+        .main-container-title-container {
+            flex-direction: column;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: inherit;
+            width: 50%;
+            padding: 0; /* 불필요한 여백 제거 */
+            margin-top: calc(100 * var(--rpx-vw));
+        }
+
+        .main-container-title-content {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 0; /* 불필요한 여백 제거 */
+            margin: 0;
+        }
+
+        @keyframes moveUpDown {
+            0%, 100% {
+                transform: translateY(0); /* 기본 위치 */
+            }
+            50% {
+                transform: translateY(-10px); /* 위로 10px 이동 */
+            }
+        }
+
+        .Scroll-down {
+            margin-top: calc(64 * var(--rpx-vw));
+            width: calc(64 * var(--rpx-vw));
+            height: calc(64 * var(--rpx-vw));
+            animation: moveUpDown 1.5s infinite; /* 1.5초마다 반복 애니메이션 */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .Scroll-down-text {
+            margin-top: calc(-48 * var(--rpx-vw));
+            font-size: calc(36 * var(--rpx-vw));
+            animation: moveUpDown 1.5s infinite; /* 1.5초마다 반복 애니메이션 */
+            transition: transform 0.3s ease-in-out;
+        }
+
+        /* 인사글 및 소개 css 여기까지 */
+
+        /* 포트폴리오 요소 컨테이너 css */
+        .main-container-portfolio {
+            border-top: solid 1px white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 100%;
+            margin: 0 auto;
+            margin-top: calc(128 * var(--rpx-vw));
+        }
+
+        /* About Me css 시작 */
+        .about-me-title, .about-me {
+            margin-top: calc(100 * var(--rpx-vw));
+        }
+
+        .about-me {
+            display: flex;
+            gap: calc(120 * var(--rpx-vw));
+        }
+
+        .my-profile-shot {
+            width: calc(280 * var(--rpx-vw));
+            border-radius: 50%;
+        }
+
+        .highlight {
+            color: #cdf256;
+        }
+
+        .icon-container {
+            margin-top: calc(60 * var(--rpx-vw));
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: calc(60 * var(--rpx-vw));
+        }
+
+        .github-icon {
+            width: calc(60 * var(--rpx-vw));
+            background: #ffffff;
+            border-radius: 100px;
+        }
+
+        .velog-icon {
+            width: calc(60 * var(--rpx-vw));
+        }
+
+        .my-profile-info {
+            font-size: calc(24 * var(--rpx-vw));
+            margin-bottom: calc(12 * var(--rpx-vw));
+        }
+
+        .info-container {
+            margin-bottom: calc(12 * var(--rpx-vw));
+        }
+
+        .info-container > p {
+            margin-bottom: calc(8 * var(--rpx-vw));
+        }
+
+        .name-text {
+            font-size: calc(24 * var(--rpx-vw));
+        }
+
+        .highlight-text {
+            font-size: calc(24 * var(--rpx-vw));
+            color: #cdf256;
+        }
+
+        .regular-text {
+            font-size: calc(18 * var(--rpx-vw));
+        }
+
+        .link-text {
+            font-size: calc(14 * var(--rpx-vw));
+        }
+
+        /* About Me css 여기까지 */
+
+        /* projects css 시작 */
+        .projects-title, .projects {
+            margin-top: calc(100 * var(--rpx-vw));
+        }
+
+        .projects {
+            display: flex;
+            gap: calc(120 * var(--rpx-vw));
+        }
+
+        .individual-project, .team-project {
+            width: calc(400 * var(--rpx-vw));
+            height: calc(250 * var(--rpx-vw));
+        }
+
+        .projects-link {
+            font-size: calc(24 * var(--rpx-vw));
+            margin-bottom: calc(20 * var(--rpx-vw));
+        }
+
+        /* Skills css 시작 */
+
+        .skills-title, .skills {
+            margin-top: calc(64 * var(--rpx-vw));
+        }
+
+        .skills {
+            display: flex;
+            gap: calc(120 * var(--rpx-vw));
+        }
+
+
+    </style>
+
 </head>
-<body>
+
+<!-- 드래그 방지 -->
+<body oncontextmenu="return false" onselectstart="return false"
+      ondragstart="return false" onkeydownn="return false">
 <!-- 제이 쿼리 -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <!-- 폰트어썸 -->
@@ -20,6 +268,137 @@
 <!-- 처음화면 -->
 <div id="body1"></div>
 
+<div class="main-body">
+    <div class="main-container">
+        <div class="greeting-container">
+            👋🏼 안녕하세요,<span class="highlight">신입 웹개발자</span>유근찬입니다.
+        </div>
+        <div class="main-container-title-container">
+            <div class="main-container-title-content">Welcome to My Portfolio</div>
+            <div class="main-container-title-content">By Yu Geun Chan</div>
+        </div>
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/b167082b1c1767fde68870850e583cb9a199cec8321417447c543b66a445b2b8?"
+             class="Scroll-down">
+        <div class="Scroll-down-text">Scroll Down</div>
+
+        <div class="main-container-portfolio">
+            <div class="about-me-title">About Me*</div>
+
+            <div class="about-me">
+                <div class="my-profile">
+                    <div>
+                        <img class="my-profile-shot"
+                             src="https://velog.velcdn.com/images/da5105/post/eacb5ee7-917c-4efa-878f-cbd96bcc17a4/image.jpg"
+                             alt="내 사진">
+                        <div class="icon-container">
+                            <a class="inline-block" target="blank" href="https://github.com/Yu-Geun-Chan">
+                                <img class="github-icon"
+                                     src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-social-github-256.png"/>
+                            </a>
+                            <a class="inline-block" target="blank" href="https://velog.io/@da5105/posts">
+                                <svg class="velog-icon" xmlns="http://www.w3.org/2000/svg" fill="#20C997"
+                                     viewBox="0 0 192 192">
+                                    <path fill-rule="evenodd"
+                                          d="M24 0h144c13.255 0 24 10.745 24 24v144c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V24C0 10.745 10.745 0 24 0Zm25 57.92v7.56h18l13.68 77.04 17.82-1.26c17.52-22.2 29.34-38.82 35.46-49.86 6.24-11.16 9.36-20.46 9.36-27.9 0-4.44-1.32-7.8-3.96-10.08-2.52-2.28-5.7-3.42-9.54-3.42-7.2 0-13.2 3.06-18 9.18 4.68 3.12 7.86 5.7 9.54 7.74 1.8 1.92 2.7 4.5 2.7 7.74 0 5.4-1.62 11.52-4.86 18.36-3.12 6.84-6.54 12.9-10.26 18.18-2.4 3.36-5.46 7.5-9.18 12.42L88.06 57.2c-.96-4.8-3.96-7.2-9-7.2-2.28 0-6.66.96-13.14 2.88-6.48 1.8-12.12 3.48-16.92 5.04Z"
+                                          clip-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-profile-info">
+                    <div class="info-container">
+                        <p class="name-text">유근찬</p>
+                    </div>
+                    <div class="info-container">
+                        <p class="regular-text">📞 010-4252-1244</p>
+                    </div>
+                    <div class="info-container">
+                        <p class="regular-text">✉️ geunchan9055@gmail.com</p>
+                    </div>
+                    <div class="info-container">
+                        <p class="highlight-text">학력</p>
+                        <p class="regular-text"> 우송대학교 (2014.03 ~ 2020.08)</p>
+                        <p class="regular-text"> 대전고등학교 (2011.03 ~ 2014.02)</p>
+                    </div>
+                    <div class="info-container">
+                        <p class="highlight-text">교육과정</p>
+                        <p class="regular-text">코리아IT아카데미 Java 과정 - 2024.05.09 ~ 2024.06.07</p>
+
+                        <p class="regular-text">코리아IT아카데미 DBMS 과정 - 2024.05.09 ~ 2024.06.05</p>
+                        <p class="regular-text">코리아IT아카데미 C언어 과정 - 2024.06.29 ~ 2024.08.18</p>
+                        <p class="regular-text">
+                            프롬프트 AI & Open API & 공공데이터를 활용한 웹/앱 개발자 양성 과정
+                        </p>
+                        <p class="regular-text"> &nbsp;&nbsp;&nbsp;&nbsp;- 2024.05.28 ~ 2024.12.16 </p>
+                        <p class="regular-text"> &nbsp;&nbsp;&nbsp;&nbsp;- 코리아IT아카데미 수강생 인터뷰
+                            <a class="link-text" href="#" target="blank"> [해당 링크] </a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="projects-title">Projects*</div>
+            <div class="projects">
+                <div>
+                    <div class="projects-link">
+                        <a href="https://g-sa.koreaisacademy.com/community/project_view.asp?idxnum=321&clkMater=&txtMenu=&txtCurPage=1&selMater=">
+                            <p>🔎 코리아IT아카데미 </p>
+                            <p>[수강생 프로젝트] 소개 </p>
+                        </a>
+                    </div>
+                    <img class="individual-project"
+                         src="https://velog.velcdn.com/images/da5105/post/914c1b56-5490-4395-8c9d-ce1ef46c3c20/image.png"
+                         alt="개인프로젝트">
+                    <div class="icon-container">
+                        <a class="inline-block" target="blank" href="https://github.com/Yu-Geun-Chan/baseball_ygc">
+                            <img class="github-icon"
+                                 src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-social-github-256.png"/>
+                        </a>
+                        <a class="inline-block" target="blank" href="https://velog.io/@da5105/series/Project1">
+                            <svg class="velog-icon" xmlns="http://www.w3.org/2000/svg" fill="#20C997"
+                                 viewBox="0 0 192 192">
+                                <path fill-rule="evenodd"
+                                      d="M24 0h144c13.255 0 24 10.745 24 24v144c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V24C0 10.745 10.745 0 24 0Zm25 57.92v7.56h18l13.68 77.04 17.82-1.26c17.52-22.2 29.34-38.82 35.46-49.86 6.24-11.16 9.36-20.46 9.36-27.9 0-4.44-1.32-7.8-3.96-10.08-2.52-2.28-5.7-3.42-9.54-3.42-7.2 0-13.2 3.06-18 9.18 4.68 3.12 7.86 5.7 9.54 7.74 1.8 1.92 2.7 4.5 2.7 7.74 0 5.4-1.62 11.52-4.86 18.36-3.12 6.84-6.54 12.9-10.26 18.18-2.4 3.36-5.46 7.5-9.18 12.42L88.06 57.2c-.96-4.8-3.96-7.2-9-7.2-2.28 0-6.66.96-13.14 2.88-6.48 1.8-12.12 3.48-16.92 5.04Z"
+                                      clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <div class="projects-link">
+                        <a href="https://g-sa.koreaisacademy.com/community/project_view.asp?idxnum=321&clkMater=&txtMenu=&txtCurPage=1&selMater=">
+                            <p>🔎 코리아IT아카데미 </p>
+                            <p>[수강생 프로젝트] 소개 </p>
+                        </a>
+                    </div>
+                    <img class="team-project"
+                         src="https://velog.velcdn.com/images/da5105/post/be97475d-922f-4a6e-866a-45edfe4638b0/image.png"
+                         alt="OneTeam.project">
+                    <div class="icon-container">
+                        <a class="inline-block" target="blank" href="https://github.com/korea-it-one-team">
+                            <img class="github-icon"
+                                 src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-social-github-256.png"/>
+                        </a>
+                        <a class="inline-block" target="blank"
+                           href="https://velog.io/@da5105/series/One.Team-%ED%8C%80%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EB%82%B4%EA%B0%80-%EB%A7%A1%EC%9D%80-%ED%8E%98%EC%9D%B4%EC%A7%80">
+                            <svg class="velog-icon" xmlns="http://www.w3.org/2000/svg" fill="#20C997"
+                                 viewBox="0 0 192 192">
+                                <path fill-rule="evenodd"
+                                      d="M24 0h144c13.255 0 24 10.745 24 24v144c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V24C0 10.745 10.745 0 24 0Zm25 57.92v7.56h18l13.68 77.04 17.82-1.26c17.52-22.2 29.34-38.82 35.46-49.86 6.24-11.16 9.36-20.46 9.36-27.9 0-4.44-1.32-7.8-3.96-10.08-2.52-2.28-5.7-3.42-9.54-3.42-7.2 0-13.2 3.06-18 9.18 4.68 3.12 7.86 5.7 9.54 7.74 1.8 1.92 2.7 4.5 2.7 7.74 0 5.4-1.62 11.52-4.86 18.36-3.12 6.84-6.54 12.9-10.26 18.18-2.4 3.36-5.46 7.5-9.18 12.42L88.06 57.2c-.96-4.8-3.96-7.2-9-7.2-2.28 0-6.66.96-13.14 2.88-6.48 1.8-12.12 3.48-16.92 5.04Z"
+                                      clip-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="skills">
+                <div class="skills-title">Skill*</div>
+            </div>
+        </div>
+    </div>
+</div>
+
 <!-- Vanta.js 설정 스크립트 -->
 <script>
     VANTA.NET({
@@ -31,7 +410,7 @@
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        color: 0x5463ca,
+        color: 0x4a6b9c,
         backgroundColor: 0x1b1b78,
         points: 20.00
     });
