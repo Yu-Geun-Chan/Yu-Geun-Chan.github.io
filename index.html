@@ -252,9 +252,39 @@
             gap: calc(120 * var(--rpx-vw));
         }
 
+        /* contact css 시작 */
+        .contact-title, .contact {
+            margin-top: calc(64 * var(--rpx-vw));
+        }
 
+        .contact {
+            display: flex;
+            font-size: calc(24 * var(--rpx-vw));
+        }
+
+        .form-title-text {
+            margin-top: calc(10 * var(--rpx-vw));
+        }
+
+        input, textarea {
+            width: calc(800 * var(--rpx-vw));
+            border-radius: calc(5 * var(--rpx-vw));
+            color: #000000 !important;
+            padding: calc(10 * var(--rpx-vw)) !important;
+        }
+
+        textarea {
+            min-height: calc(300 * var(--rpx-vw));
+        }
+
+        input::placeholder, textarea::placeholder {
+            font-size: calc(16 * var(--rpx-vw));
+        }
+
+        .btn {
+            width: calc(100 * var(--rpx-vw));
+        }
     </style>
-
 </head>
 
 <!-- 드래그 방지 -->
@@ -425,11 +455,52 @@
                 </div>
             </div>
         </div>
+        <div class="skills-title">Skill*</div>
         <div class="skills">
-            <div class="skills-title">Skill*</div>
+            <div>
+                <img src="" alt="스킬사진">
+            </div>
+        </div>
+
+        <iframe name="frAttachFiles" style="display: none;"></iframe>
+
+        <div class="contact-title">Contact*</div>
+        <div class="contact">
+            <form role="form" method="POST"
+                  action="https://script.google.com/macros/s/AKfycbwFXIwPbVDjesLF6m9cpf0PjLcFsAWZQH3U2pYKDTOAByQUVTbOl5lWwY68DatCbzPU/exec"
+                  target="frAttachFiles" onSubmit="alert('이메일을 정상적으로 보냈습니다.');">
+                <div class="form-title">
+                    <div class="form-title-text">Name</div>
+                    <div>
+                        <input class="name" name="name" type="text"
+                               placeholder="이름을 입력해주세요." required>
+                    </div>
+                </div>
+                <div class="form-title">
+                    <div class="form-title-text">Phone</div>
+                    <div><input class="phone" name="phone" type="text"
+                                placeholder="전화번호를 입력해주세요." required>
+                    </div>
+                </div>
+                <div class="form-title">
+                    <div class="form-title-text">Email</div>
+                    <div>
+                        <input class="email" name="email" type="email"
+                               placeholder="이메일을 입력해주세요. ex) id@email.com" required>
+                    </div>
+                </div>
+                <div class="form-title">
+                    <div class="form-title-text">Message</div>
+                    <div>
+                        <textarea class=""
+                                  name="body" autocomplete="off" type="text"
+                                  placeholder="메세지를 남겨주세요."></textarea>
+                    </div>
+                </div>
+                <button class="btn" type="submit">SUBMIT</button>
+            </form>
         </div>
     </div>
-</div>
 </div>
 
 <!-- Vanta.js 설정 스크립트 -->
@@ -443,9 +514,9 @@
         minWidth: 200.00,
         scale: 1.00,
         scaleMobile: 1.00,
-        color: 0x4a6b9c,
+        color: 0x494b55,
         backgroundColor: 0x1b1b78,
-        points: 10.00
+        points: 15.00
     });
 </script>
 </body>
