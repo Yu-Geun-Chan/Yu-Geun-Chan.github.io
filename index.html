@@ -258,6 +258,8 @@
             justify-content: center; /* 가운데 정렬 */
             width: 100%;
             margin-bottom: calc(50 * var(--rpx-vw));
+            margin-left:auto;
+            margin-right:auto;
         }
 
         .category {
@@ -266,61 +268,33 @@
         }
 
         .category > h2 {
+            width: 80%;
             text-align: center;
             margin-bottom: 20px;
             font-size: calc(36 * var(--rpx-vw));
         }
 
         .icons {
+            width: 80%;
             display: flex;
             flex-wrap: wrap;
             justify-content: center; /* 가운데 정렬 */
         }
 
-        .skill-icon-container, .skill-icon-container-bottom, .skill-icon-container-bottom-col {
+        .skill-icon-container {
             text-align: center;
-            width: calc(30% - calc(20 * var(--rpx-vw)));
+            width: calc(120 * var(--rpx-vw));
             margin: 0 calc(20 * var(--rpx-vw)) calc(20 * var(--rpx-vw)) calc(20 * var(--rpx-vw));
         }
 
         .skill-icon-container img {
-            width: calc(178 * var(--rpx-vw));
-            height: calc(178 * var(--rpx-vw));
+            width: calc(120 * var(--rpx-vw));
+            height: calc(120 * var(--rpx-vw));
             margin-bottom: calc(10 * var(--rpx-vw));
             background-color: #ffffff;
-        }
-
-        .skill-icon-container-bottom img {
-            width: calc(178 * var(--rpx-vw));
-            height: calc(178 * var(--rpx-vw));
-            margin-bottom: calc(10 * var(--rpx-vw));
-            background-color: #ffffff;
-        }
-
-        .skill-icon-container-bottom-col img {
-            width: calc(178 * var(--rpx-vw));
-            height: calc(178 * var(--rpx-vw));
-            margin-bottom: calc(10 * var(--rpx-vw));
-            background-color: #ffffff;
-        }
-
-        .skill-icon-container-bottom {
-            width: inherit;
-        }
-
-        .skill-icon-container-bottom-col {
-            width: calc(45% - calc(20 * var(--rpx-vw)));
         }
 
         .skill-icon-container p {
-            font-size: calc(24 * var(--rpx-vw));
-        }
-
-        .skill-icon-container-bottom p {
-            font-size: calc(24 * var(--rpx-vw));
-        }
-
-        .skill-icon-container-bottom-col p {
             font-size: calc(24 * var(--rpx-vw));
         }
 
@@ -357,9 +331,11 @@
         input::placeholder, textarea::placeholder {
             font-size: calc(16 * var(--rpx-vw));
         }
+
         .btn {
             width: calc(100 * var(--rpx-vw));
         }
+
         /* contact css 여기까지 */
     </style>
 </head>
@@ -554,9 +530,19 @@
                             <p>MyBatis</p>
                         </div>
                         <div class="skill-icon-container">
+                            <img src="https://github.com/user-attachments/assets/14e95b31-5d58-4fea-add5-ce5b9c573780"
+                                 alt="JPA">
+                            <p>JPA</p>
+                        </div>
+                        <div class="skill-icon-container">
                             <img src="https://github.com/user-attachments/assets/f08c1373-0024-4ba1-8408-d0bcd6c0131e"
                                  alt="Python">
                             <p>Python</p>
+                        </div>
+                        <div class="skill-icon-container">
+                            <img src="https://github.com/user-attachments/assets/d0eb4e82-5aad-4e9b-b596-c688fea6f609"
+                                 alt="Flask">
+                            <p>Flask</p>
                         </div>
                     </div>
                 </div>
@@ -607,10 +593,9 @@
                 <div class="category">
                     <h2>Version Control</h2>
                     <div class="icons">
-                        <div class="skill-icon-container-bottom">
-                            <img
-                                    src="https://github.com/user-attachments/assets/cd000519-94ff-4f50-b11f-0b53b4db8efb"
-                                    alt="Git">
+                        <div class="skill-icon-container">
+                            <img src="https://github.com/user-attachments/assets/cd000519-94ff-4f50-b11f-0b53b4db8efb"
+                                 alt="Git">
                             <p>Git</p>
                         </div>
                     </div>
@@ -618,16 +603,14 @@
                 <div class="category">
                     <h2>Collaboration</h2>
                     <div class="icons">
-                        <div class="skill-icon-container-bottom-col">
-                            <img
-                                    src="https://github.com/user-attachments/assets/0e7ea41f-8466-41f5-9a31-74d2bc1c23a4"
-                                    alt="GitHub">
+                        <div class="skill-icon-container">
+                            <img src="https://github.com/user-attachments/assets/0e7ea41f-8466-41f5-9a31-74d2bc1c23a4"
+                                 alt="GitHub">
                             <p>GitHub</p>
                         </div>
-                        <div class="skill-icon-container-bottom-col">
-                            <img
-                                    src="https://github.com/user-attachments/assets/c265064f-9a2f-407d-a61a-076b72004165"
-                                    alt="Figma">
+                        <div class="skill-icon-container">
+                            <img src="https://github.com/user-attachments/assets/c265064f-9a2f-407d-a61a-076b72004165"
+                                 alt="Figma">
                             <p>Figma</p>
                         </div>
                     </div>
@@ -635,10 +618,9 @@
                 <div class="category">
                     <h2>Database</h2>
                     <div class="icons">
-                        <div class="skill-icon-container-bottom">
-                            <img
-                                    src="https://github.com/user-attachments/assets/c152ac86-3f98-4a46-9b70-3c77f3dbfb44"
-                                    alt="MySQL">
+                        <div class="skill-icon-container">
+                            <img src="https://github.com/user-attachments/assets/c152ac86-3f98-4a46-9b70-3c77f3dbfb44"
+                                 alt="MySQL">
                             <p>MySQL</p>
                         </div>
                     </div>
