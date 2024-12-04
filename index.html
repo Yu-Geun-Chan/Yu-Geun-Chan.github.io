@@ -241,16 +241,62 @@
             text-align: center;
         }
 
-        /* Skills css 시작 */
-
+        /* skills css 시작 */
         .skills-title, .skills {
             margin-top: calc(64 * var(--rpx-vw));
         }
 
         .skills {
             display: flex;
-            gap: calc(120 * var(--rpx-vw));
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: calc(50 * var(--rpx-vw));
         }
+
+        .category-container {
+            display: flex;
+            justify-content: center; /* 가운데 정렬 */
+            width: 100%;
+            margin-bottom: calc(50 * var(--rpx-vw));
+        }
+
+        .category {
+            width: calc(500 * var(--rpx-vw)); /* 각 카테고리가 충분히 넓어지도록 조정 */
+            margin: 0 calc(30 * var(--rpx-vw)); /* 두 카테고리 간의 간격 */
+        }
+
+        .category > h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: calc(36 * var(--rpx-vw));
+        }
+
+        .icons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* 가운데 정렬 */
+        }
+
+        .skill-icon-container {
+            text-align: center;
+            width:calc(150 * var(--rpx-vw));
+            margin-bottom: calc(20 * var(--rpx-vw));
+        }
+
+        .skill-icon-container img {
+            width: calc(100 * var(--rpx-vw));
+            height: calc(100 * var(--rpx-vw));
+            margin-bottom: calc(10 * var(--rpx-vw));
+            background-color: #ffffff;
+        }
+
+        .skill-icon-container p {
+            font-size: calc(20 * var(--rpx-vw));
+        }
+
+        /* skills css 끝 */
+
+        /* skills css 여기까지 */
 
         /* contact css 시작 */
         .contact-title, .contact {
@@ -285,6 +331,8 @@
         .btn {
             width: calc(100 * var(--rpx-vw));
         }
+
+        /* contact css 여기까지 */
     </style>
 </head>
 
@@ -458,10 +506,99 @@
         </div>
         <div class="skills-title">Skill*</div>
         <div class="skills">
-            <div>
-                <img src="" alt="스킬사진">
+            <div class="category-container">
+                <div class="category">
+                    <h2>Back-end</h2>
+                    <div class="icons">
+                        <div class="skill-icon-container">
+                            <img src="https://github.com/user-attachments/assets/7254bc5b-7668-4498-9c1e-ca79c246bbae" alt="Java">
+                            <p>Java</p>
+                        </div>
+                        <div class="skill-icon-container">
+                            <img src="https://github.com/user-attachments/assets/e1410232-03e9-4c13-8a14-355198c49060" alt="Spring Boot">
+                            <p>Spring Boot</p>
+                        </div>
+                        <div class="skill-icon-container">
+                            <img src="https://github.com/user-attachments/assets/41ec35e1-bf2c-466f-9587-c47bc54c2506" alt="MyBatis">
+                            <p>MyBatis</p>
+                        </div>
+                        <div class="skill-icon-container">
+                            <img src="https://github.com/user-attachments/assets/f08c1373-0024-4ba1-8408-d0bcd6c0131e" alt="Python">
+                            <p>Python</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="category">
+                    <h2>Front-end</h2>
+                    <div class="icons">
+                        <div class="skill-icon-container">
+                            <img src="https://github.com/user-attachments/assets/6826f6d7-1165-4537-a810-972368907976" alt="HTML">
+                            <p>HTML</p>
+                        </div>
+                        <div class="skill-icon-container">
+                            <img src="https://github.com/user-attachments/assets/4dca6894-b7ae-42ff-a23c-78d3a9873cd0" alt="CSS">
+                            <p>CSS</p>
+                        </div>
+                        <div class="skill-icon-container">
+                            <img src="https://github.com/user-attachments/assets/1ea41c3f-f6db-4ca8-8fff-23dfe5b749f7" alt="JavaScript">
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="skill-icon-container">
+                            <img src="https://github.com/user-attachments/assets/93333ea8-5c7f-4eff-9e35-f00b7f888270" alt="React">
+                            <p>React</p>
+                        </div>
+                        <div class="skill-icon-container">
+                            <img src="https://github.com/user-attachments/assets/2a245947-0be0-4a19-a51f-ee0c21a4baba" alt="jQuary">
+                            <p>jQuary</p>
+                        </div>
+                        <div class="skill-icon-container">
+                            <img src="https://github.com/user-attachments/assets/48c3b32a-8e63-4382-9e01-4ef964312b07" alt="Tailwind">
+                            <p>Tailwind</p>
+                        </div>
+                        <div class="skill-icon-container">
+                            <img src="https://github.com/user-attachments/assets/afbae42c-0b74-445b-8801-667cccdef193" alt="Vscode">
+                            <p>VsCode</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 아래쪽에 Version Control, Collaboration, Database 배치 -->
+            <div class="category-container">
+                <div class="category">
+                    <h2>Version Control</h2>
+                    <div class="icons">
+                        <div class="skill-icon-container">
+                            <img src="https://github.com/user-attachments/assets/cd000519-94ff-4f50-b11f-0b53b4db8efb" alt="Git">
+                            <p>Git</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="category">
+                    <h2>Collaboration</h2>
+                    <div class="icons">
+                        <div class="skill-icon-container">
+                            <img src="https://github.com/user-attachments/assets/0e7ea41f-8466-41f5-9a31-74d2bc1c23a4" alt="GitHub">
+                            <p>GitHub</p>
+                        </div>
+                        <div class="skill-icon-container">
+                            <img src="https://github.com/user-attachments/assets/c265064f-9a2f-407d-a61a-076b72004165" alt="Figma">
+                            <p>Figma</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="category">
+                    <h2>Database</h2>
+                    <div class="icons">
+                        <div class="skill-icon-container">
+                            <img src="https://github.com/user-attachments/assets/c152ac86-3f98-4a46-9b70-3c77f3dbfb44" alt="MySQL">
+                            <p>MySQL</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+
 
         <iframe name="frAttachFiles" style="display: none;"></iframe>
 
