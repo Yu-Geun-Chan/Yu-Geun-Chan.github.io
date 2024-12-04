@@ -271,6 +271,7 @@
             border-radius: calc(5 * var(--rpx-vw));
             color: #000000 !important;
             padding: calc(10 * var(--rpx-vw)) !important;
+            font-size: calc(18 * var(--rpx-vw)) !important;
         }
 
         textarea {
@@ -468,7 +469,7 @@
         <div class="contact">
             <form role="form" method="POST"
                   action="https://script.google.com/macros/s/AKfycbwFXIwPbVDjesLF6m9cpf0PjLcFsAWZQH3U2pYKDTOAByQUVTbOl5lWwY68DatCbzPU/exec"
-                  target="frAttachFiles" onSubmit="alert('이메일을 정상적으로 보냈습니다.');">
+                  target="frAttachFiles" onsubmit="return validateForm();">
                 <div class="form-title">
                     <div class="form-title-text">Name</div>
                     <div>
@@ -478,8 +479,10 @@
                 </div>
                 <div class="form-title">
                     <div class="form-title-text">Phone</div>
-                    <div><input class="phone" name="phone" type="text"
-                                placeholder="전화번호를 입력해주세요." required>
+                    <div>
+                        <input class="phone" name="phone" type="text"
+                               placeholder="전화번호를 입력해주세요." required
+                               oninput="oninputPhone(this)">
                     </div>
                 </div>
                 <div class="form-title">
@@ -502,6 +505,30 @@
         </div>
     </div>
 </div>
+
+<!-- 전화번호 형식 체크 및 변환 -->
+<script>
+    function oninputPhone(target) {
+        target.value = target.value
+            .replace(/[^0-9]/g, '') // 숫자가 아닌 문자를 모두 제거
+            .replace(/(\d{3})(\d{3,4})(\d{4})/, '$1-$2-$3') // 3자리-3~4자리-4자리로 포맷
+            .substring(0, 13); // 최대 길이 제한
+    }
+
+    function validateForm() {
+        const form = document.forms[0];
+        const phoneInput = form.phone;
+
+        const phonePattern = /^\d{3}-\d{3,4}-\d{4}$/;
+        if (!phonePattern.test(phoneInput.value)) {
+            alert('유효한 전화번호 형식이 아닙니다. 3자리-3~4자리-4자리 형식으로 입력해주세요.');
+            phoneInput.focus();
+            return false; // 제출 중단
+        }
+        alert('이메일을 정상적으로 보냈습니다.');
+        return true; // 제출 진행
+    }
+</script>
 
 <!-- Vanta.js 설정 스크립트 -->
 <script>
