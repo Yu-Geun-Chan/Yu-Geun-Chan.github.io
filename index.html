@@ -105,6 +105,29 @@
             margin: 0;
         }
 
+        @keyframes waveHand {
+            0% {
+                transform: rotate(0); /* 기본 위치 */
+            }
+            20% {
+                transform: rotate(-20deg); /* 왼쪽으로 기울이기 */
+            }
+            50% {
+                transform: rotate(20deg); /* 오른쪽으로 기울이기 */
+            }
+            70% {
+                transform: rotate(-10deg); /* 왼쪽으로 살짝 기울이기 */
+            }
+            100% {
+                transform: rotate(0); /* 기본 위치 */
+            }
+        }
+
+        .hand {
+            animation: waveHand 1.5s ease-in-out infinite; /* 자연스러운 애니메이션 반복 */
+            transform-origin: bottom center; /* 손목 위치를 회전 중심으로 설정 */
+        }
+
         @keyframes moveUpDown {
             0%, 100% {
                 transform: translateY(0); /* 기본 위치 */
@@ -367,7 +390,7 @@
 <div class="main-body">
     <div class="main-container">
         <div class="greeting-container">
-            👋🏼 안녕하세요,<span class="highlight">신입 웹개발자</span>유근찬입니다.
+            <span class="hand">🖐️</span>안녕하세요,<span class="highlight">신입 웹개발자</span>유근찬입니다.
         </div>
         <div class="main-container-title-container">
             <div class="main-container-title-content">Welcome to My Portfolio</div>
@@ -440,7 +463,8 @@
             <div class="projects">
                 <div>
                     <div class="projects-link">
-                        <a target="blank" href="https://g-sa.koreaisacademy.com/community/project_view.asp?idxnum=321&clkMater=&txtMenu=&txtCurPage=1&selMater=">
+                        <a target="blank"
+                           href="https://g-sa.koreaisacademy.com/community/project_view.asp?idxnum=321&clkMater=&txtMenu=&txtCurPage=1&selMater=">
                             <p>🔎 코리아IT아카데미 </p>
                             <p>[수강생 프로젝트] 소개 </p>
                         </a>
@@ -468,7 +492,8 @@
                 </div>
                 <div>
                     <div class="projects-link">
-                        <a target="blank" href="https://g-sa.koreaisacademy.com/community/project_view.asp?idxnum=321&clkMater=&txtMenu=&txtCurPage=1&selMater=">
+                        <a target="blank"
+                           href="https://g-sa.koreaisacademy.com/community/project_view.asp?idxnum=321&clkMater=&txtMenu=&txtCurPage=1&selMater=">
                             <p>🔎 코리아IT아카데미 </p>
                             <p>[수강생 프로젝트] 소개 </p>
                         </a>
