@@ -13,6 +13,21 @@
         };
     </script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const elements = [
+                document.querySelector('.greeting-container'),
+                ...document.querySelectorAll('.main-container-title-container .main-container-title-content'),
+            ];
+
+            elements.forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.5}s`; // 0.5초 간격
+            });
+        });
+
+
+    </script>
+
     <style>
         body {
             overflow-x: hidden;
@@ -76,9 +91,27 @@
             height: 100%;
             position: fixed;
         }
+        /* 공통 애니메이션 스타일 */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* 순차적으로 나타날 때의 딜레이 설정 */
+        .main-container-title-container .main-container-title-content {
+            opacity: 0; /* 초기 감춤 */
+            animation: fadeIn 1s ease-in-out forwards;
+        }
 
         /* 인사글 및 소개 css 시작 */
         .greeting-container {
+            animation: fadeIn 1s ease-in-out forwards;
             display: flex; /* 가로 정렬 */
             justify-content: center; /* 수평 중앙 정렬 */
             align-items: center; /* 수직 중앙 정렬 */
