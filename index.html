@@ -24,8 +24,6 @@
                 el.style.animationDelay = `${index * 0.5}s`; // 0.5초 간격
             });
         });
-
-
     </script>
 
     <style>
@@ -43,6 +41,7 @@
             font-weight: 700;
             font-style: normal;
         }
+
         /*스크롤바 스타일 통일*/
         body::-webkit-scrollbar {
             width: 12px;
@@ -91,6 +90,7 @@
             height: 100%;
             position: fixed;
         }
+
         /* 공통 애니메이션 스타일 */
         @keyframes fadeIn {
             from {
@@ -206,6 +206,22 @@
         }
 
         /* 인사글 및 소개 css 여기까지 */
+        .header-bar {
+            font-size: calc(24 * var(--rpx-vw));
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%; /* 가로 전체를 차지 */
+            height: calc(150 * var(--rpx-vw));
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            opacity: 0; /* 처음에는 투명하게 설정 */
+            visibility: hidden; /* 처음에는 숨김 */
+        }
 
         /* 포트폴리오 요소 컨테이너 css */
         .main-container-portfolio {
@@ -440,6 +456,15 @@
 <!-- 처음화면 -->
 <div id="body1"></div>
 
+<div id="header-1" class="header-bar">
+    <ul>
+        <li><a href="#about-me">About Me*</a></li>
+        <li><a href="#projects">Projects*</a></li>
+        <li><a href="#skills">Skills*</a></li>
+        <li><a href="#contact">Contact*</a></li>
+    </ul>
+</div>
+
 <div class="main-body">
     <div class="main-container">
         <div class="greeting-container">
@@ -454,9 +479,9 @@
         <div class="Scroll-down-text">Scroll Down</div>
 
         <div class="main-container-portfolio">
-            <div class="about-me-title">About Me*</div>
+            <div class="about-me-title" id="about-me">About Me*</div>
 
-            <div class="about-me">
+            <div class="about-me" >
                 <div class="my-profile">
                     <div>
                         <img class="my-profile-shot"
@@ -512,7 +537,7 @@
                 </div>
             </div>
 
-            <div class="projects-title">Projects*</div>
+            <div class="projects-title" id="projects">Projects*</div>
             <div class="projects">
                 <div>
                     <div class="projects-link">
@@ -599,7 +624,7 @@
                 </div>
             </div>
         </div>
-        <div class="skills-title">Skill*</div>
+        <div class="skills-title" id="skills">Skill*</div>
         <div class="skills">
             <div class="category-container">
                 <div class="category">
@@ -727,7 +752,7 @@
 
         <iframe name="frAttachFiles" style="display: none;"></iframe>
 
-        <div class="contact-title">Contact*</div>
+        <div class="contact-title" id="contact">Contact*</div>
         <div class="contact">
             <form role="form" method="POST"
                   action="https://script.google.com/macros/s/AKfycbwFXIwPbVDjesLF6m9cpf0PjLcFsAWZQH3U2pYKDTOAByQUVTbOl5lWwY68DatCbzPU/exec"
@@ -791,6 +816,31 @@
         return true; // 제출 진행
     }
 </script>
+
+<script>
+    window.addEventListener('load', function () {
+        function showHeaderOnScroll() {
+            const aboutMeTitle = document.querySelector('.about-me-title');
+            const headerBar = document.getElementById('header-1');
+            const aboutMeTitlePosition = aboutMeTitle.getBoundingClientRect().top;
+
+            console.log('About Me 위치:', aboutMeTitlePosition);
+            console.log('스크롤 위치:', window.scrollY);
+
+            if (aboutMeTitlePosition <= window.innerHeight) {
+                headerBar.style.opacity = '1';  // 요소가 보이도록 설정
+                headerBar.style.visibility = 'visible';  // 요소를 보이게 설정
+            } else {
+                headerBar.style.opacity = '0';  // 요소를 투명하게 설정
+                headerBar.style.visibility = 'hidden';  // 요소를 숨김
+            }
+        }
+
+        window.addEventListener('scroll', showHeaderOnScroll);
+        showHeaderOnScroll();
+    });
+</script>
+
 
 <!-- Vanta.js 설정 스크립트 -->
 <script>
