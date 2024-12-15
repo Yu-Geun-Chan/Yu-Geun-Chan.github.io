@@ -13,6 +13,7 @@
         };
     </script>
 
+    <!-- 인사말 애니메이션 함수 -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
             const elements = [
@@ -212,15 +213,19 @@
             top: 0;
             left: 0;
             width: 100%; /* 가로 전체를 차지 */
-            height: calc(150 * var(--rpx-vw));
+            height: calc(70 * var(--rpx-vw));
             color: #fff;
             text-align: center;
-            padding: 10px;
+            padding: calc(10 * var(--rpx-vw));
             z-index: 10;
             display: flex;
             justify-content: center;
             opacity: 0; /* 처음에는 투명하게 설정 */
             visibility: hidden; /* 처음에는 숨김 */
+        }
+
+        .about-me-margin-top, .projects-margin-top, .skills-margin-top, .contact-margin-top {
+            margin-top: calc(70 * var(--rpx-vw));
         }
 
         /* 포트폴리오 요소 컨테이너 css */
@@ -456,14 +461,17 @@
 <!-- 처음화면 -->
 <div id="body1"></div>
 
-<div id="header-1" class="header-bar">
-    <ul>
-        <li><a href="#about-me">About Me*</a></li>
-        <li><a href="#projects">Projects*</a></li>
-        <li><a href="#skills">Skills*</a></li>
-        <li><a href="#contact">Contact*</a></li>
-    </ul>
-</div>
+<header id="header-1" class="header-bar bg-gradient-to-r from-indigo-400 to-purple-400">
+    <nav class="container mx-auto flex justify-between items-center">
+        <div class="text-2xl font-bold">Yu-Geun-Chan</div>
+        <ul class="flex space-x-4">
+            <li><a href="#about-me" class="hover:text-gray-300">About Me*</a></li>
+            <li><a href="#projects" class="hover:text-gray-300">Projects*</a></li>
+            <li><a href="#skills" class="hover:text-gray-300">Skills*</a></li>
+            <li><a href="#contact" class="hover:text-gray-300">Contact*</a></li>
+        </ul>
+    </nav>
+</header>
 
 <div class="main-body">
     <div class="main-container">
@@ -479,9 +487,10 @@
         <div class="Scroll-down-text">Scroll Down</div>
 
         <div class="main-container-portfolio">
-            <div class="about-me-title" id="about-me">About Me*</div>
+            <div class="about-me-margin-top" id="about-me"></div>
 
-            <div class="about-me" >
+            <div class="about-me-title">About Me*</div>
+            <div class="about-me">
                 <div class="my-profile">
                     <div>
                         <img class="my-profile-shot"
@@ -537,7 +546,9 @@
                 </div>
             </div>
 
-            <div class="projects-title" id="projects">Projects*</div>
+            <div class="projects-margin-top" id="projects"></div>
+
+            <div class="projects-title">Projects*</div>
             <div class="projects">
                 <div>
                     <div class="projects-link">
@@ -624,7 +635,10 @@
                 </div>
             </div>
         </div>
-        <div class="skills-title" id="skills">Skill*</div>
+
+        <div class="skills-margin-top" id="skills"></div>
+
+        <div class="skills-title">Skill*</div>
         <div class="skills">
             <div class="category-container">
                 <div class="category">
@@ -749,10 +763,11 @@
             </div>
         </div>
 
-
         <iframe name="frAttachFiles" style="display: none;"></iframe>
 
-        <div class="contact-title" id="contact">Contact*</div>
+        <div class="contact-margin-top" id="contact"></div>
+
+        <div class="contact-title">Contact*</div>
         <div class="contact">
             <form role="form" method="POST"
                   action="https://script.google.com/macros/s/AKfycbwFXIwPbVDjesLF6m9cpf0PjLcFsAWZQH3U2pYKDTOAByQUVTbOl5lWwY68DatCbzPU/exec"
@@ -817,17 +832,16 @@
     }
 </script>
 
+<!-- 헤더바 포트폴리오 시작점부터 나타나게 하는 함수 -->
 <script>
     window.addEventListener('load', function () {
         function showHeaderOnScroll() {
-            const aboutMeTitle = document.querySelector('.about-me-title');
+            const aboutMeTitle = document.querySelector('.main-container-portfolio');
             const headerBar = document.getElementById('header-1');
             const aboutMeTitlePosition = aboutMeTitle.getBoundingClientRect().top;
 
-            console.log('About Me 위치:', aboutMeTitlePosition);
-            console.log('스크롤 위치:', window.scrollY);
-
-            if (aboutMeTitlePosition <= window.innerHeight) {
+            // 요소가 화면의 최상단에 도달했을 때 헤더를 나타냄
+            if (aboutMeTitlePosition <= 0) {
                 headerBar.style.opacity = '1';  // 요소가 보이도록 설정
                 headerBar.style.visibility = 'visible';  // 요소를 보이게 설정
             } else {
@@ -840,6 +854,7 @@
         showHeaderOnScroll();
     });
 </script>
+
 
 
 <!-- Vanta.js 설정 스크립트 -->
