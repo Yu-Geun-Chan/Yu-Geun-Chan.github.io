@@ -136,7 +136,7 @@
             justify-items: center;
         }
 
-        .menu-bar > div {
+        .menu-bar > div { /* 메뉴바 왼쪽 깃허브 이름 */
             height: calc(70 * var(--rpx-vw));
             line-height: calc(70 * var(--rpx-vw));
             margin-left: calc(15 * var(--rpx-vw));
@@ -156,7 +156,6 @@
         .menu-item {
             position: relative;
         }
-
         /* 헤더바 css 끝 */
 
         /* 인사글 및 소개 css 시작 */
@@ -254,7 +253,6 @@
             animation: moveUpDown 2s infinite; /* 2초마다 반복 애니메이션 */
             transition: transform 0.3s ease-in-out;
         }
-
         /* 인사글 및 소개 css 여기까지 */
 
         .about-me-margin-top, .projects-margin-top, .skills-margin-top, .contact-margin-top {
@@ -344,7 +342,6 @@
         .link-text {
             font-size: calc(20 * var(--rpx-vw));
         }
-
         /* About Me css 여기까지 */
 
         /* projects css 시작 */
@@ -374,8 +371,9 @@
             width: calc(300 * var(--rpx-vw));
             text-align: center;
         }
+        /* skills css 여기까지 */
 
-        /* skills css 시작 */
+        /* projects css 시작 */
         .skills-title, .skills {
             margin-top: calc(100 * var(--rpx-vw));
         }
@@ -431,9 +429,6 @@
         .skill-icon-container p {
             font-size: calc(24 * var(--rpx-vw));
         }
-
-        /* skills css 끝 */
-
         /* skills css 여기까지 */
 
         /* contact css 시작 */
@@ -507,7 +502,7 @@
 
 <header id="header-1" class="header-bar bg-gradient-to-r from-indigo-400 to-purple-400">
     <nav class="menu-bar">
-        <div>Yu-Geun-Chan</div>
+        <div><a href="#main-body">Yu-Geun-Chan</a></div>
         <ul class="menu-item-bar">
             <li class="menu-item"><a href="#about-me" class="hover:text-gray-300">About Me*</a></li>
             <li>|</li>
@@ -520,7 +515,7 @@
     </nav>
 </header>
 
-<div class="main-body">
+<div class="main-body" id="main-body">
     <div class="main-container">
         <div class="greeting-container">
             <span class="hand">🖐️</span>안녕하세요,<span class="highlight">신입 웹개발자</span>유근찬입니다.
