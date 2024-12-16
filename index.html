@@ -446,6 +446,13 @@
             font-size: calc(24 * var(--rpx-vw));
         }
 
+        .contact-form {
+            display:flex;
+            flex-direction: column;
+            width: calc(800 * var(--rpx-vw));
+            align-items: center;
+        }
+
         .form-title-text {
             margin-top: calc(10 * var(--rpx-vw));
         }
@@ -467,7 +474,11 @@
         }
 
         .btn {
-            width: calc(100 * var(--rpx-vw));
+            width: calc(800 * var(--rpx-vw));
+            border-radius: calc(10 * var(--rpx-vw));
+            background-color: rgba(129, 140, 248, 1);
+            display:flex;
+            justify-content: center;
         }
 
         /* contact css 여기까지 */
@@ -810,7 +821,7 @@
 
             <div class="contact-title">Contact*</div>
             <div class="contact">
-                <form role="form" method="POST"
+                <form class="contact-form" role="form" method="POST"
                       action="https://script.google.com/macros/s/AKfycbwFXIwPbVDjesLF6m9cpf0PjLcFsAWZQH3U2pYKDTOAByQUVTbOl5lWwY68DatCbzPU/exec"
                       target="frAttachFiles" onsubmit="return validateForm();">
                     <div class="form-title">
@@ -843,7 +854,7 @@
                                   placeholder="메세지를 남겨주세요." required></textarea>
                         </div>
                     </div>
-                    <button class="btn" type="submit">SUBMIT</button>
+                    <button class="btn" type="submit">보내기</button>
                 </form>
             </div>
         </div>
