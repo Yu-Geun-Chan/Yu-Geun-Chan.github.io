@@ -110,6 +110,18 @@
             animation: fadeIn 1s ease-in-out forwards;
         }
 
+        /* section line */
+        .section-line, .section-line-first {
+            width: 95%;
+            border-bottom: calc(1 * var(--rpx-vw)) solid white;
+        }
+        .section-line-first {
+            margin:calc(90 * var(--rpx-vw)) auto;
+        }
+        .section-line {
+            margin:calc(150 * var(--rpx-vw)) auto;
+        }
+
         /* 헤더바 css 시작 */
         .header-bar {
             font-size: calc(24 * var(--rpx-vw));
@@ -156,6 +168,7 @@
         .menu-item {
             position: relative;
         }
+
         /* 헤더바 css 끝 */
 
         /* 인사글 및 소개 css 시작 */
@@ -253,29 +266,21 @@
             animation: moveUpDown 2s infinite; /* 2초마다 반복 애니메이션 */
             transition: transform 0.3s ease-in-out;
         }
-        /* 인사글 및 소개 css 여기까지 */
 
-        .about-me-margin-top, .projects-margin-top, .skills-margin-top, .contact-margin-top {
-            margin-top: calc(70 * var(--rpx-vw));
-        }
+        /* 인사글 및 소개 css 여기까지 */
 
         /* 포트폴리오 요소 컨테이너 css */
         .main-container-portfolio {
-            border-top: solid 1px white;
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 100%;
             margin: 0 auto;
-            margin-top: calc(128 * var(--rpx-vw));
         }
 
         /* About Me css 시작 */
-        .about-me-title, .about-me {
-            margin-top: calc(100 * var(--rpx-vw));
-        }
-
         .about-me {
+            margin-top: calc(100 * var(--rpx-vw));
             display: flex;
             gap: calc(100 * var(--rpx-vw));
         }
@@ -342,14 +347,12 @@
         .link-text {
             font-size: calc(20 * var(--rpx-vw));
         }
+
         /* About Me css 여기까지 */
 
         /* projects css 시작 */
-        .projects-title, .projects {
-            margin-top: calc(100 * var(--rpx-vw));
-        }
-
         .projects {
+            margin-top: calc(100 * var(--rpx-vw));
             display: flex;
             gap: calc(120 * var(--rpx-vw));
         }
@@ -371,14 +374,12 @@
             width: calc(300 * var(--rpx-vw));
             text-align: center;
         }
+
         /* skills css 여기까지 */
 
         /* projects css 시작 */
-        .skills-title, .skills {
-            margin-top: calc(100 * var(--rpx-vw));
-        }
-
         .skills {
+            margin-top: calc(100 * var(--rpx-vw));
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -429,20 +430,18 @@
         .skill-icon-container p {
             font-size: calc(24 * var(--rpx-vw));
         }
+
         /* skills css 여기까지 */
 
         /* contact css 시작 */
-        .contact-title, .contact {
-            margin-top: calc(100 * var(--rpx-vw));
-        }
-
         .contact {
+            margin-top: calc(100 * var(--rpx-vw));
             display: flex;
             font-size: calc(24 * var(--rpx-vw));
         }
 
         .contact-form {
-            display:flex;
+            display: flex;
             flex-direction: column;
             width: calc(800 * var(--rpx-vw));
             align-items: center;
@@ -472,7 +471,7 @@
             width: calc(800 * var(--rpx-vw));
             border-radius: calc(10 * var(--rpx-vw));
             background-color: rgba(129, 140, 248, 1);
-            display:flex;
+            display: flex;
             justify-content: center;
         }
 
@@ -528,9 +527,9 @@
              class="Scroll-down">
         <div class="Scroll-down-text">Scroll Down</div>
 
-        <div class="main-container-portfolio">
-            <div class="about-me-margin-top" id="about-me"></div>
+        <div class="section-line-first" id="about-me"></div>
 
+        <div class="main-container-portfolio">
             <div class="about-me-title">About Me*</div>
             <div class="about-me">
                 <div class="my-profile">
@@ -579,7 +578,9 @@
                             프롬프트 AI & Open API & 공공데이터를 활용한 웹/앱 개발자 양성 과정
                         </p>
                         <p class="regular-text"> &nbsp;&nbsp;&nbsp;&nbsp;- 2024.05.28 ~ 2024.12.16 </p>
-                        <p class="regular-text"> &nbsp;&nbsp;&nbsp;&nbsp;- <a href="https://file.notion.so/f/f/78ed393a-32c7-4f4b-a495-7cfff817d2be/838c2d1b-fc1d-4214-906b-2b8953bee228/KakaoTalk_20241216_141752636.jpg?table=block&id=15e92a5b-513b-80fa-8e62-f1238a11b916&spaceId=78ed393a-32c7-4f4b-a495-7cfff817d2be&expirationTimestamp=1734480000000&signature=regXZ4gDJEo_V6Q5KCElAZeuARy69UgNBBsuKvSDK10&downloadName=KakaoTalk_20241216_141752636.jpg" target="blank">[수료증 링크]</a></p>
+                        <p class="regular-text"> &nbsp;&nbsp;&nbsp;&nbsp;- <a
+                                href="https://file.notion.so/f/f/78ed393a-32c7-4f4b-a495-7cfff817d2be/838c2d1b-fc1d-4214-906b-2b8953bee228/KakaoTalk_20241216_141752636.jpg?table=block&id=15e92a5b-513b-80fa-8e62-f1238a11b916&spaceId=78ed393a-32c7-4f4b-a495-7cfff817d2be&expirationTimestamp=1734480000000&signature=regXZ4gDJEo_V6Q5KCElAZeuARy69UgNBBsuKvSDK10&downloadName=KakaoTalk_20241216_141752636.jpg"
+                                target="blank">[수료증 링크]</a></p>
                         <p class="regular-text"> &nbsp;&nbsp;&nbsp;&nbsp;- 코리아IT아카데미 수강생 인터뷰
                             <a class="link-text"
                                href="https://g-sa.koreaisacademy.com/community/interview_view.asp?txtContentSeq=466&txtCurPage=1&gubun=2"
@@ -589,7 +590,7 @@
                 </div>
             </div>
 
-            <div class="projects-margin-top" id="projects"></div>
+            <div class="section-line" id="projects"></div>
 
             <div class="projects-title">Projects*</div>
             <div class="projects">
@@ -625,7 +626,7 @@
                 <div>
                     <div class="projects-link">
                         <a target="blank"
-                           href="https://g-sa.koreaisacademy.com/community/project_view.asp?idxnum=321&clkMater=&txtMenu=&txtCurPage=1&selMater=">
+                           href="https://g-sa.koreaisacademy.com/community/project_view.asp?idxnum=332&clkMater=&txtMenu=&txtCurPage=1&selMater=">
                             <p>🔎 코리아IT아카데미 </p>
                             <p>[수강생 프로젝트] 소개 </p>
                         </a>
@@ -678,8 +679,7 @@
                 </div>
             </div>
 
-
-            <div class="skills-margin-top" id="skills"></div>
+            <div class="section-line" id="skills"></div>
 
             <div class="skills-title">Skill*</div>
             <div class="skills">
@@ -813,7 +813,7 @@
 
             <iframe name="frAttachFiles" style="display: none;"></iframe>
 
-            <div class="contact-margin-top" id="contact"></div>
+            <div class="section-line" id="contact"></div>
 
             <div class="contact-title">Contact*</div>
             <div class="contact">
@@ -885,12 +885,12 @@
 <script>
     window.addEventListener('load', function () {
         function showHeaderOnScroll() {
-            const aboutMeTitle = document.querySelector('.main-container-portfolio');
+            const aboutMeTitle = document.querySelector('.section-line-first');
             const headerBar = document.getElementById('header-1');
             const aboutMeTitlePosition = aboutMeTitle.getBoundingClientRect().top;
 
             // 요소가 화면의 최상단에 도달했을 때 헤더를 나타냄
-            if (aboutMeTitlePosition <= 0) {
+            if (aboutMeTitlePosition <= 50) {
                 headerBar.style.opacity = '1';  // 요소가 보이도록 설정
                 headerBar.style.visibility = 'visible';  // 요소를 보이게 설정
             } else {
