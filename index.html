@@ -37,9 +37,9 @@
         }
 
         @font-face {
-            font-family: 'NEXON Football Gothic B';
-            src: url('https://gcore.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXONFootballGothicBA1.woff') format('woff');
-            font-weight: 700;
+            font-family: 'MaplestoryOTFBold';
+            src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/MaplestoryOTFBold.woff') format('woff');
+            font-weight: normal;
             font-style: normal;
         }
 
@@ -75,7 +75,7 @@
 
         /* 배경색 */
         body {
-            font-family: 'NEXON Football Gothic B', Audiowide;
+            font-family: 'MaplestoryOTFBold', Audiowide;
             margin: 0;
             padding: 0;
             background: #1b1b78;
@@ -83,7 +83,7 @@
         }
 
         body * {
-            font-family: 'NEXON Football Gothic B', Audiowide;
+            font-family: 'MaplestoryOTFBold', Audiowide;
         }
 
         #body1 {
@@ -115,16 +115,18 @@
             width: 95%;
             border-bottom: calc(1 * var(--rpx-vw)) solid white;
         }
+
         .section-line-first {
-            margin:calc(90 * var(--rpx-vw)) auto;
+            margin: calc(90 * var(--rpx-vw)) auto;
         }
+
         .section-line {
-            margin:calc(150 * var(--rpx-vw)) auto;
+            margin: calc(150 * var(--rpx-vw)) auto;
         }
 
         /* 헤더바 css 시작 */
         .header-bar {
-            font-size: calc(24 * var(--rpx-vw));
+            font-size: calc(20 * var(--rpx-vw));
             position: fixed;
             top: 0;
             left: 0;
@@ -149,15 +151,15 @@
         }
 
         .menu-bar > div { /* 메뉴바 왼쪽 깃허브 이름 */
-            height: calc(70 * var(--rpx-vw));
-            line-height: calc(70 * var(--rpx-vw));
+            height: calc(40 * var(--rpx-vw));
+            line-height: calc(40 * var(--rpx-vw));
             margin-left: calc(15 * var(--rpx-vw));
         }
 
         .menu-item-bar {
             display: flex;
-            height: calc(70 * var(--rpx-vw));
-            line-height: calc(70 * var(--rpx-vw));
+            height: calc(40 * var(--rpx-vw));
+            line-height: calc(40 * var(--rpx-vw));
         }
 
         .menu-item-bar > * {
@@ -280,7 +282,7 @@
 
         /* About Me css 시작 */
         .about-me {
-            margin-top: calc(100 * var(--rpx-vw));
+            margin-top: calc(50 * var(--rpx-vw));
             display: flex;
             gap: calc(100 * var(--rpx-vw));
         }
@@ -305,21 +307,20 @@
         }
 
         .github-icon {
-            width: calc(100 * var(--rpx-vw));
+            width: calc(60 * var(--rpx-vw));
             background: #ffffff;
             border-radius: 100px;
         }
 
         .velog-icon {
-            width: calc(100 * var(--rpx-vw));
+            width: calc(60 * var(--rpx-vw));
         }
 
         .notion-icon {
-            width: calc(120 * var(--rpx-vw));
+            width: calc(60 * var(--rpx-vw));
         }
 
         .my-profile-info {
-            font-size: calc(24 * var(--rpx-vw));
             margin-bottom: calc(12 * var(--rpx-vw));
         }
 
@@ -332,27 +333,27 @@
         }
 
         .name-text {
-            font-size: calc(36 * var(--rpx-vw));
+            font-size: calc(30 * var(--rpx-vw));
         }
 
         .highlight-text {
-            font-size: calc(36 * var(--rpx-vw));
+            font-size: calc(30 * var(--rpx-vw));
             color: #cdf256;
         }
 
         .regular-text {
-            font-size: calc(28 * var(--rpx-vw));
+            font-size: calc(24 * var(--rpx-vw));
         }
 
         .link-text {
-            font-size: calc(20 * var(--rpx-vw));
+            font-size: calc(18 * var(--rpx-vw));
         }
 
         /* About Me css 여기까지 */
 
         /* projects css 시작 */
         .projects {
-            margin-top: calc(100 * var(--rpx-vw));
+            margin-top: calc(50 * var(--rpx-vw));
             display: flex;
             gap: calc(120 * var(--rpx-vw));
         }
@@ -363,51 +364,56 @@
         }
 
         .projects-link {
-            font-size: calc(28 * var(--rpx-vw));
+            font-size: calc(24 * var(--rpx-vw));
             width: calc(300 * var(--rpx-vw));
             height: calc(100 * var(--rpx-vw));
         }
 
         .projects-content {
             margin-top: calc(16 * var(--rpx-vw));
-            font-size: calc(28 * var(--rpx-vw));
+            font-size: calc(22 * var(--rpx-vw));
             width: calc(300 * var(--rpx-vw));
             text-align: center;
         }
 
-        /* skills css 여기까지 */
+        .team-project-icon-container {
+            margin-top: calc(60 * var(--rpx-vw));
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: calc(60 * var(--rpx-vw));
+        }
 
-        /* projects css 시작 */
+        /* projects css 여기까지 */
+
+        /* skills css 시작 */
         .skills {
-            margin-top: calc(100 * var(--rpx-vw));
+            margin-top: calc(50 * var(--rpx-vw));
             display: flex;
             flex-direction: column;
             align-items: center;
-            margin-bottom: calc(50 * var(--rpx-vw));
         }
 
         .category-container {
             display: flex;
             justify-content: center; /* 가운데 정렬 */
             width: 100%;
-            margin-bottom: calc(50 * var(--rpx-vw));
-            margin-left: calc(120 * var(--rpx-vw));
         }
 
         .category {
-            width: 50%; /* 각 카테고리가 충분히 넓어지도록 조정 */
-            margin: 0 calc(30 * var(--rpx-vw)); /* 두 카테고리 간의 간격 */
+            width: 100%; /* 각 카테고리가 충분히 넓어지도록 조정 */
         }
 
         .category > h2 {
-            width: 80%;
+            width: 100%;
             text-align: center;
             margin-bottom: 20px;
             font-size: calc(36 * var(--rpx-vw));
         }
 
         .icons {
-            width: 80%;
+            width: 100%;
             display: flex;
             flex-wrap: wrap;
             justify-content: center; /* 가운데 정렬 */
@@ -415,27 +421,27 @@
 
         .skill-icon-container {
             text-align: center;
-            width: calc(120 * var(--rpx-vw));
-            margin: 0 calc(20 * var(--rpx-vw)) calc(20 * var(--rpx-vw)) calc(20 * var(--rpx-vw));
+            width: calc(80 * var(--rpx-vw));
+            margin: 0 calc(10 * var(--rpx-vw)) calc(10 * var(--rpx-vw)) calc(10 * var(--rpx-vw));
         }
 
         .skill-icon-container img {
-            width: calc(120 * var(--rpx-vw));
-            height: calc(120 * var(--rpx-vw));
+            width: calc(80 * var(--rpx-vw));
+            height: calc(80 * var(--rpx-vw));
             margin-bottom: calc(10 * var(--rpx-vw));
             background-color: #ffffff;
             border-radius: calc(20 * var(--rpx-vw));
         }
 
         .skill-icon-container p {
-            font-size: calc(24 * var(--rpx-vw));
+            font-size: calc(18 * var(--rpx-vw));
         }
 
         /* skills css 여기까지 */
 
         /* contact css 시작 */
         .contact {
-            margin-top: calc(100 * var(--rpx-vw));
+            margin-top: calc(50 * var(--rpx-vw));
             display: flex;
             font-size: calc(24 * var(--rpx-vw));
         }
@@ -460,7 +466,7 @@
         }
 
         textarea {
-            min-height: calc(300 * var(--rpx-vw));
+            min-height: calc(230 * var(--rpx-vw));
         }
 
         input::placeholder, textarea::placeholder {
@@ -579,7 +585,7 @@
                         </p>
                         <p class="regular-text"> &nbsp;&nbsp;&nbsp;&nbsp;- 2024.05.28 ~ 2024.12.16 </p>
                         <p class="regular-text"> &nbsp;&nbsp;&nbsp;&nbsp;- <a
-                                href="https://file.notion.so/f/f/78ed393a-32c7-4f4b-a495-7cfff817d2be/838c2d1b-fc1d-4214-906b-2b8953bee228/KakaoTalk_20241216_141752636.jpg?table=block&id=15e92a5b-513b-80fa-8e62-f1238a11b916&spaceId=78ed393a-32c7-4f4b-a495-7cfff817d2be&expirationTimestamp=1734480000000&signature=regXZ4gDJEo_V6Q5KCElAZeuARy69UgNBBsuKvSDK10&downloadName=KakaoTalk_20241216_141752636.jpg"
+                                href="https://file.notion.so/f/f/78ed393a-32c7-4f4b-a495-7cfff817d2be/838c2d1b-fc1d-4214-906b-2b8953bee228/KakaoTalk_20241216_141752636.jpg?table=block&id=15e92a5b-513b-80fa-8e62-f1238a11b916&spaceId=78ed393a-32c7-4f4b-a495-7cfff817d2be&expirationTimestamp=1734739200000&signature=WQp5INnqA0SaKWT4ibw_myHW_kvxJlHIj2S-4dDTuJE&downloadName=KakaoTalk_20241216_141752636.jpg"
                                 target="blank">[수료증 링크]</a></p>
                         <p class="regular-text"> &nbsp;&nbsp;&nbsp;&nbsp;- 코리아IT아카데미 수강생 인터뷰
                             <a class="link-text"
@@ -602,9 +608,12 @@
                             <p>[수강생 프로젝트] 소개 </p>
                         </a>
                     </div>
-                    <img class="individual-project"
-                         src="https://velog.velcdn.com/images/da5105/post/914c1b56-5490-4395-8c9d-ce1ef46c3c20/image.png"
-                         alt="개인프로젝트">
+                    <a target="blank"
+                       href="https://g-sa.koreaisacademy.com/community/project_view.asp?idxnum=321&clkMater=&txtMenu=&txtCurPage=1&selMater=">
+                        <img class="individual-project"
+                             src="https://velog.velcdn.com/images/da5105/post/914c1b56-5490-4395-8c9d-ce1ef46c3c20/image.png"
+                             alt="개인프로젝트">
+                    </a>
                     <div class="projects-content">
                         <p>⚾ KLC </p>
                     </div>
@@ -631,13 +640,16 @@
                             <p>[수강생 프로젝트] 소개 </p>
                         </a>
                     </div>
-                    <img class="team-project"
-                         src="https://velog.velcdn.com/images/da5105/post/be97475d-922f-4a6e-866a-45edfe4638b0/image.png"
-                         alt="OneTeam.project">
+                    <a target="blank"
+                       href="https://g-sa.koreaisacademy.com/community/project_view.asp?idxnum=332&clkMater=&txtMenu=&txtCurPage=1&selMater=">
+                        <img class="team-project"
+                             src="https://velog.velcdn.com/images/da5105/post/be97475d-922f-4a6e-866a-45edfe4638b0/image.png"
+                             alt="OneTeam.project">
+                    </a>
                     <div class="projects-content">
                         <p>⚽ KICKNALYSIS </p>
                     </div>
-                    <div class="icon-container">
+                    <div class="team-project-icon-container">
                         <a class="inline-block" target="blank" href="https://github.com/korea-it-one-team">
                             <img class="github-icon"
                                  src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-social-github-256.png"/>
@@ -651,8 +663,6 @@
                                       clip-rule="evenodd"></path>
                             </svg>
                         </a>
-                    </div>
-                    <div class="icon-container">
                         <a class="inline-block" target="blank"
                            href="https://dusty-dugout-ea6.notion.site/FOOTBALL-ANAYSIS-PROJECT-11b92a5b513b80559734f94d3b0e738b">
                             <img class="notion-icon"
@@ -693,9 +703,19 @@
                                 <p>Java</p>
                             </div>
                             <div class="skill-icon-container">
+                                <img src="https://github.com/user-attachments/assets/f08c1373-0024-4ba1-8408-d0bcd6c0131e"
+                                     alt="Python">
+                                <p>Python</p>
+                            </div>
+                            <div class="skill-icon-container">
                                 <img src="https://github.com/user-attachments/assets/e1410232-03e9-4c13-8a14-355198c49060"
                                      alt="Spring Boot">
                                 <p>Spring Boot</p>
+                            </div>
+                            <div class="skill-icon-container">
+                                <img src="https://github.com/user-attachments/assets/0e63c619-6548-4b0c-b942-4a21eaedeef5"
+                                     alt="Postman">
+                                <p>Postman</p>
                             </div>
                             <div class="skill-icon-container">
                                 <img src="https://github.com/user-attachments/assets/41ec35e1-bf2c-466f-9587-c47bc54c2506"
@@ -708,14 +728,29 @@
                                 <p>JPA</p>
                             </div>
                             <div class="skill-icon-container">
-                                <img src="https://github.com/user-attachments/assets/f08c1373-0024-4ba1-8408-d0bcd6c0131e"
-                                     alt="Python">
-                                <p>Python</p>
+                                <img src="https://github.com/user-attachments/assets/c152ac86-3f98-4a46-9b70-3c77f3dbfb44"
+                                     alt="MySQL">
+                                <p>MySQL</p>
+                            </div>
+                            <div class="skill-icon-container">
+                                <img src="https://github.com/user-attachments/assets/fcfb36d3-de02-48ff-a514-0991b7bd8e8f"
+                                     alt="H2">
+                                <p>H2</p>
+                            </div>
+                            <div class="skill-icon-container">
+                                <img src="https://github.com/user-attachments/assets/e3142d2b-02ac-489c-9fac-9e99cedda43a"
+                                     alt="PostgreSQL">
+                                <p>Postgre SQL</p>
                             </div>
                             <div class="skill-icon-container">
                                 <img src="https://github.com/user-attachments/assets/d0eb4e82-5aad-4e9b-b596-c688fea6f609"
                                      alt="Flask">
                                 <p>Flask</p>
+                            </div>
+                            <div class="skill-icon-container">
+                                <img src="https://github.com/user-attachments/assets/574890a3-70ad-431e-adb1-1f5df7402c3a"
+                                     alt="OpenCV">
+                                <p>OpenCV</p>
                             </div>
                         </div>
                     </div>
@@ -735,12 +770,27 @@
                             <div class="skill-icon-container">
                                 <img src="https://github.com/user-attachments/assets/1ea41c3f-f6db-4ca8-8fff-23dfe5b749f7"
                                      alt="JavaScript">
-                                <p>JavaScript</p>
+                                <p>Java Script</p>
+                            </div>
+                            <div class="skill-icon-container">
+                                <img src="https://github.com/user-attachments/assets/f3ab1cb7-5c30-4f34-beaf-224ec1471918"
+                                     alt="JSP">
+                                <p>JSP</p>
+                            </div>
+                            <div class="skill-icon-container">
+                                <img src="https://github.com/user-attachments/assets/fb64b46a-4843-44d5-95e4-be4b512dcff4"
+                                     alt="Thymeleaf">
+                                <p>Thyme leaf</p>
                             </div>
                             <div class="skill-icon-container">
                                 <img src="https://github.com/user-attachments/assets/93333ea8-5c7f-4eff-9e35-f00b7f888270"
                                      alt="React">
                                 <p>React</p>
+                            </div>
+                            <div class="skill-icon-container">
+                                <img src="https://github.com/user-attachments/assets/cb9a35e7-3d1a-4f57-99dc-bd6f14a54551"
+                                     alt="AJAX">
+                                <p>AJAX</p>
                             </div>
                             <div class="skill-icon-container">
                                 <img src="https://github.com/user-attachments/assets/2a245947-0be0-4a19-a51f-ee0c21a4baba"
@@ -757,30 +807,6 @@
                                      alt="Vscode">
                                 <p>VsCode</p>
                             </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- 아래쪽에 Version Control, Collaboration, Database 배치 -->
-                <div class="category-container">
-                    <div class="category">
-                        <h2>Version Control</h2>
-                        <div class="icons">
-                            <div class="skill-icon-container">
-                                <img src="https://github.com/user-attachments/assets/cd000519-94ff-4f50-b11f-0b53b4db8efb"
-                                     alt="Git">
-                                <p>Git</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="category">
-                        <h2>Collaboration</h2>
-                        <div class="icons">
-                            <div class="skill-icon-container">
-                                <img src="https://github.com/user-attachments/assets/0e7ea41f-8466-41f5-9a31-74d2bc1c23a4"
-                                     alt="GitHub">
-                                <p>GitHub</p>
-                            </div>
                             <div class="skill-icon-container">
                                 <img src="https://github.com/user-attachments/assets/c265064f-9a2f-407d-a61a-076b72004165"
                                      alt="Figma">
@@ -789,22 +815,47 @@
                         </div>
                     </div>
                     <div class="category">
-                        <h2>Database</h2>
+                        <h2>Dev Tools</h2>
                         <div class="icons">
                             <div class="skill-icon-container">
-                                <img src="https://github.com/user-attachments/assets/c152ac86-3f98-4a46-9b70-3c77f3dbfb44"
-                                     alt="MySQL">
-                                <p>MySQL</p>
+                                <img src="https://github.com/user-attachments/assets/362db163-9e43-4bbd-a7a3-2507bd65db7d"
+                                     alt="IntelliJ">
+                                <p>IntelliJ</p>
                             </div>
                             <div class="skill-icon-container">
-                                <img src="https://github.com/user-attachments/assets/fcfb36d3-de02-48ff-a514-0991b7bd8e8f"
-                                     alt="H2">
-                                <p>H2</p>
+                                <img src="https://github.com/user-attachments/assets/0ac9cb60-305c-4eeb-a35d-34c15ede4098"
+                                     alt="STS4">
+                                <p>STS4</p>
                             </div>
                             <div class="skill-icon-container">
-                                <img src="https://github.com/user-attachments/assets/e3142d2b-02ac-489c-9fac-9e99cedda43a"
-                                     alt="PostgreSQL">
-                                <p>PostgreSQL</p>
+                                <img src="https://github.com/user-attachments/assets/4109197c-7361-4bdf-aaef-c17e300de9f9"
+                                     alt="XAMPP">
+                                <p>XAMPP</p>
+                            </div>
+                            <div class="skill-icon-container">
+                                <img src="https://github.com/user-attachments/assets/5302627d-75ea-40ce-b167-905a5b1c7ea9"
+                                     alt="Docker">
+                                <p>Docker</p>
+                            </div>
+                            <div class="skill-icon-container">
+                                <img src="https://github.com/user-attachments/assets/cd000519-94ff-4f50-b11f-0b53b4db8efb"
+                                     alt="Git">
+                                <p>Git</p>
+                            </div>
+                            <div class="skill-icon-container">
+                                <img src="https://github.com/user-attachments/assets/0e7ea41f-8466-41f5-9a31-74d2bc1c23a4"
+                                     alt="GitHub">
+                                <p>GitHub</p>
+                            </div>
+                            <div class="skill-icon-container">
+                                <img src="https://github.com/user-attachments/assets/3ffe3d6e-91cd-4d20-b451-52edca6b8c18"
+                                     alt="SQLyog">
+                                <p>SQLyog</p>
+                            </div>
+                            <div class="skill-icon-container">
+                                <img src="https://github.com/user-attachments/assets/deac17da-c335-4884-beb6-94e1cd78096d"
+                                     alt="DBeaver">
+                                <p>DBeaver</p>
                             </div>
                         </div>
                     </div>
