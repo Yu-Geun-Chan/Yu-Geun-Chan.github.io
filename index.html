@@ -125,14 +125,13 @@
 
         /* 헤더바 css 시작 */
         .header-bar {
-            font-size: calc(20 * var(--rpx-vw));
+            font-size: calc(14 * var(--rpx-vw));
             position: fixed;
             top: 0;
             left: 0;
             width: 100%; /* 가로 전체를 차지 */
             color: #fff;
             text-align: center;
-            padding: calc(10 * var(--rpx-vw));
             z-index: 10;
             display: flex;
             justify-content: center;
@@ -368,6 +367,10 @@
             gap: calc(120 * var(--rpx-vw));
         }
 
+        .projects-title {
+            font-size: calc(50 * var(--rpx-vw));
+        }
+
         .individual-project, .team-project, .portfolio-project {
             width: calc(300 * var(--rpx-vw));
             height: calc(200 * var(--rpx-vw));
@@ -405,6 +408,10 @@
             align-items: center;
         }
 
+        .skills-title {
+            font-size: calc(50 * var(--rpx-vw));
+        }
+
         .category-container {
             display: flex;
             justify-content: center; /* 가운데 정렬 */
@@ -419,7 +426,7 @@
             width: 100%;
             text-align: center;
             margin-bottom: 20px;
-            font-size: calc(36 * var(--rpx-vw));
+            font-size: calc(24 * var(--rpx-vw));
         }
 
         .icons {
@@ -444,7 +451,7 @@
         }
 
         .skill-icon-container p {
-            font-size: calc(18 * var(--rpx-vw));
+            font-size: calc(14 * var(--rpx-vw));
         }
 
         /* skills css 여기까지 */
@@ -454,6 +461,10 @@
             margin-top: calc(50 * var(--rpx-vw));
             display: flex;
             font-size: calc(24 * var(--rpx-vw));
+        }
+
+        .contact-title {
+            font-size: calc(50 * var(--rpx-vw));
         }
 
         .contact-form {
@@ -472,7 +483,7 @@
             border-radius: calc(5 * var(--rpx-vw));
             color: #000000 !important;
             padding: calc(10 * var(--rpx-vw)) !important;
-            font-size: calc(18 * var(--rpx-vw)) !important;
+            font-size: calc(14 * var(--rpx-vw)) !important;
         }
 
         textarea {
@@ -480,7 +491,7 @@
         }
 
         input::placeholder, textarea::placeholder {
-            font-size: calc(16 * var(--rpx-vw));
+            font-size: calc(12 * var(--rpx-vw));
         }
 
         .btn {
@@ -489,6 +500,7 @@
             background-color: rgba(129, 140, 248, 1);
             display: flex;
             justify-content: center;
+            font-size: calc(18 * var(--rpx-vw));
         }
 
         /* contact css 여기까지 */
