@@ -117,11 +117,11 @@
         }
 
         .section-line-first {
-            margin: calc(90 * var(--rpx-vw)) auto;
+            margin: calc(20 * var(--rpx-vw)) auto;
         }
 
         .section-line {
-            margin: calc(150 * var(--rpx-vw)) auto;
+            margin: calc(80 * var(--rpx-vw)) auto;
         }
 
         /* 헤더바 css 시작 */
@@ -170,7 +170,6 @@
         .menu-item {
             position: relative;
         }
-
         /* 헤더바 css 끝 */
 
         /* 인사글 및 소개 css 시작 */
@@ -180,8 +179,7 @@
             justify-content: center; /* 수평 중앙 정렬 */
             align-items: center; /* 수직 중앙 정렬 */
             gap: calc(24 * var(--rpx-vw)); /* 항목 간 간격 조절 */
-            font-size: calc(48 * var(--rpx-vw));
-            margin-top: calc(36 * var(--rpx-vw));
+            font-size: calc(36 * var(--rpx-vw));
         }
 
         .main-container {
@@ -197,7 +195,7 @@
             padding: calc(40 * var(--rpx-vh)) 0;
             overflow: hidden;
             gap: calc(60 * var(--rpx-vw));
-            font-size: calc(84 * var(--rpx-vw));
+            font-size: calc(72 * var(--rpx-vw));
         }
 
         .main-container-title-container {
@@ -255,16 +253,16 @@
         }
 
         .Scroll-down {
-            margin-top: calc(48 * var(--rpx-vw));
-            width: calc(116 * var(--rpx-vw));
-            height: calc(116 * var(--rpx-vw));
+            margin-top: calc(36 * var(--rpx-vw));
+            width: calc(106 * var(--rpx-vw));
+            height: calc(106 * var(--rpx-vw));
             animation: moveUpDown 2s infinite; /* 2초마다 반복 애니메이션 */
             transition: transform 0.3s ease-in-out;
         }
 
         .Scroll-down-text {
-            margin-top: calc(-48 * var(--rpx-vw));
-            font-size: calc(48 * var(--rpx-vw));
+            margin-top: calc(-36 * var(--rpx-vw));
+            font-size: calc(36 * var(--rpx-vw));
             animation: moveUpDown 2s infinite; /* 2초마다 반복 애니메이션 */
             transition: transform 0.3s ease-in-out;
         }
@@ -280,32 +278,7 @@
             margin: 0 auto;
         }
 
-        /* About Me css 시작 */
-        .about-me {
-            margin-top: calc(50 * var(--rpx-vw));
-            display: flex;
-            gap: calc(100 * var(--rpx-vw));
-        }
-
-        .my-profile-shot {
-            margin: auto;
-            width: calc(380 * var(--rpx-vw));
-            border-radius: 50%;
-        }
-
-        .highlight {
-            color: #cdf256;
-        }
-
-        .icon-container {
-            margin-top: calc(60 * var(--rpx-vw));
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: calc(100 * var(--rpx-vw));
-        }
-
+        /* 깃허브, 벨로그, 노션 아이콘 기본 css */
         .github-icon {
             width: calc(60 * var(--rpx-vw));
             background: #ffffff;
@@ -320,6 +293,41 @@
             width: calc(60 * var(--rpx-vw));
         }
 
+        /* About Me css 시작 */
+        .about-me {
+            margin-top: calc(50 * var(--rpx-vw));
+            display: flex;
+            gap: calc(100 * var(--rpx-vw));
+        }
+
+        .my-profile-shot {
+            margin: auto;
+            width: calc(350 * var(--rpx-vw));
+            border-radius: 10%;
+        }
+
+        .profile-github-icon {
+            width: calc(80 * var(--rpx-vw));
+            background: #ffffff;
+            border-radius: 100px;
+        }
+
+        .profile-velog-icon {
+            width: calc(80 * var(--rpx-vw));
+        }
+
+        .highlight {
+            color: #cdf256;
+        }
+
+        .icon-container {
+            margin-top: calc(60 * var(--rpx-vw));
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: calc(100 * var(--rpx-vw));
+        }
         .my-profile-info {
             margin-bottom: calc(12 * var(--rpx-vw));
         }
@@ -545,11 +553,11 @@
                              alt="내 사진">
                         <div class="icon-container">
                             <a class="inline-block" target="blank" href="https://github.com/Yu-Geun-Chan">
-                                <img class="github-icon"
+                                <img class="profile-github-icon"
                                      src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-social-github-256.png"/>
                             </a>
                             <a class="inline-block" target="blank" href="https://velog.io/@da5105/posts">
-                                <svg class="velog-icon" xmlns="http://www.w3.org/2000/svg" fill="#20C997"
+                                <svg class="profile-velog-icon" xmlns="http://www.w3.org/2000/svg" fill="#20C997"
                                      viewBox="0 0 192 192">
                                     <path fill-rule="evenodd"
                                           d="M24 0h144c13.255 0 24 10.745 24 24v144c0 13.255-10.745 24-24 24H24c-13.255 0-24-10.745-24-24V24C0 10.745 10.745 0 24 0Zm25 57.92v7.56h18l13.68 77.04 17.82-1.26c17.52-22.2 29.34-38.82 35.46-49.86 6.24-11.16 9.36-20.46 9.36-27.9 0-4.44-1.32-7.8-3.96-10.08-2.52-2.28-5.7-3.42-9.54-3.42-7.2 0-13.2 3.06-18 9.18 4.68 3.12 7.86 5.7 9.54 7.74 1.8 1.92 2.7 4.5 2.7 7.74 0 5.4-1.62 11.52-4.86 18.36-3.12 6.84-6.54 12.9-10.26 18.18-2.4 3.36-5.46 7.5-9.18 12.42L88.06 57.2c-.96-4.8-3.96-7.2-9-7.2-2.28 0-6.66.96-13.14 2.88-6.48 1.8-12.12 3.48-16.92 5.04Z"
